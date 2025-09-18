@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 195 100% 50%;
+    --primary: 210 100% 50%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 4.8% 95.9%;
@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 315 100% 50%;
+    --accent: 270 100% 50%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,23 +35,23 @@ All colors MUST be HSL.
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 195 100% 50%;
+    --ring: 210 100% 50%;
 
     --radius: 0.75rem;
 
     /* Custom neon design tokens */
-    --neon-cyan: 195 100% 50%;
-    --neon-pink: 315 100% 50%;
-    --neon-purple: 270 100% 50%;
+    --neon-cyan: 210 100% 50%;
+    --neon-pink: 270 100% 60%;
+    --neon-purple: 240 100% 60%;
     --neon-green: 120 100% 50%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(315 100% 50%));
-    --gradient-neon: linear-gradient(45deg, hsl(195 100% 50%), hsl(315 100% 50%), hsl(270 100% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(195 100% 50% / 0.05) 100%);
-    --shadow-neon: 0 0 30px hsl(195 100% 50% / 0.5);
-    --shadow-neon-pink: 0 0 30px hsl(315 100% 50% / 0.5);
-    --glow-cyan: 0 0 20px hsl(195 100% 50% / 0.3);
-    --glow-pink: 0 0 20px hsl(315 100% 50% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(270 100% 60%));
+    --gradient-neon: linear-gradient(45deg, hsl(210 100% 50%), hsl(270 100% 60%), hsl(240 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 100% 50% / 0.05) 100%);
+    --shadow-neon: 0 0 30px hsl(210 100% 50% / 0.5);
+    --shadow-neon-pink: 0 0 30px hsl(270 100% 60% / 0.5);
+    --glow-cyan: 0 0 20px hsl(210 100% 50% / 0.3);
+    --glow-pink: 0 0 20px hsl(270 100% 60% / 0.3);
     
     --glass-bg: hsl(0 0% 100% / 0.1);
     --glass-border: hsl(240 5.9% 90% / 0.3);
@@ -76,7 +76,7 @@ All colors MUST be HSL.
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 195 100% 50%;
+    --primary: 210 100% 50%;
     --primary-foreground: 240 10% 3.9%;
 
     --secondary: 240 3.7% 15.9%;
@@ -85,7 +85,7 @@ All colors MUST be HSL.
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 315 100% 50%;
+    --accent: 270 100% 50%;
     --accent-foreground: 240 10% 3.9%;
 
     --destructive: 0 62.8% 30.6%;
@@ -93,10 +93,10 @@ All colors MUST be HSL.
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 195 100% 50%;
+    --ring: 210 100% 50%;
 
     /* Dark theme neon effects */
-    --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(195 100% 50% / 0.1) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(210 100% 50% / 0.1) 100%);
     --glass-bg: hsl(240 10% 3.9% / 0.3);
     --glass-border: hsl(240 3.7% 15.9% / 0.3);
   }

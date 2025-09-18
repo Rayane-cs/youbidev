@@ -93,17 +93,17 @@ export const Hero = () => {
 
         {/* Right side - Animated Stats */}
         <div className="grid grid-cols-2 gap-6">
-          <div className="fade-in-up glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300 floating-animation">
+          <div className="fade-in-up glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300">
             <div className="text-4xl font-bold neon-text mb-2">3+</div>
             <div className="text-muted-foreground">Years Experience</div>
           </div>
           
-          <div className="fade-in-up glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300 floating-animation animation-delay-200">
+          <div className="fade-in-up glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300 animation-delay-200">
             <div className="text-4xl font-bold neon-text mb-2">50+</div>
             <div className="text-muted-foreground">Projects Done</div>
           </div>
           
-          <div className="fade-in-up col-span-2 glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300 floating-animation animation-delay-400">
+          <div className="fade-in-up col-span-2 glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300 animation-delay-400">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
                 <span className="text-white text-xl font-bold">💡</span>
