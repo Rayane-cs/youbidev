@@ -8,66 +8,97 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 15% 8%;
-    --foreground: 0 0% 95%;
+    /* Light theme */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 220 12% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 220 12% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 263 70% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 195 100% 50%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 220 12% 18%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 220 12% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 263 70% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 315 100% 50%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 12% 20%;
-    --input: 220 12% 18%;
-    --ring: 263 70% 65%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 195 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(263 70% 65%), hsl(250 70% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220 12% 15%), hsl(220 12% 20%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 15% 8%) 0%, hsl(263 70% 65% / 0.1) 100%);
-    --shadow-glow: 0 0 50px hsl(263 70% 65% / 0.3);
-    --shadow-card: 0 8px 32px hsl(220 12% 5% / 0.4);
-    --glass-bg: hsl(220 12% 12% / 0.8);
-    --glass-border: hsl(220 12% 25% / 0.3);
+    /* Custom neon design tokens */
+    --neon-cyan: 195 100% 50%;
+    --neon-pink: 315 100% 50%;
+    --neon-purple: 270 100% 50%;
+    --neon-green: 120 100% 50%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(315 100% 50%));
+    --gradient-neon: linear-gradient(45deg, hsl(195 100% 50%), hsl(315 100% 50%), hsl(270 100% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(195 100% 50% / 0.05) 100%);
+    --shadow-neon: 0 0 30px hsl(195 100% 50% / 0.5);
+    --shadow-neon-pink: 0 0 30px hsl(315 100% 50% / 0.5);
+    --glow-cyan: 0 0 20px hsl(195 100% 50% / 0.3);
+    --glow-pink: 0 0 20px hsl(315 100% 50% / 0.3);
+    
+    --glass-bg: hsl(0 0% 100% / 0.1);
+    --glass-border: hsl(240 5.9% 90% / 0.3);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Dark theme uses same values as default since we're dark by default */
-    --background: 220 15% 8%;
-    --foreground: 0 0% 95%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 195 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 315 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 195 100% 50%;
+
+    /* Dark theme neon effects */
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(195 100% 50% / 0.1) 100%);
+    --glass-bg: hsl(240 10% 3.9% / 0.3);
+    --glass-border: hsl(240 3.7% 15.9% / 0.3);
   }
 }
 
@@ -77,26 +108,109 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans overflow-x-hidden;
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Poppins', sans-serif;
     background: var(--gradient-hero);
     background-attachment: fixed;
+    scroll-behavior: smooth;
   }
 
   .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-card);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
-  .hero-text {
-    background: var(--gradient-primary);
+  .neon-text {
+    background: var(--gradient-neon);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: var(--glow-cyan);
   }
 
-  .glow-effect {
-    box-shadow: var(--shadow-glow);
+  .neon-glow {
+    box-shadow: var(--shadow-neon);
+    transition: all 0.3s ease;
+  }
+
+  .neon-glow:hover {
+    box-shadow: var(--shadow-neon), var(--shadow-neon-pink);
+    transform: translateY(-2px);
+  }
+
+  .progress-bar {
+    background: var(--gradient-primary);
+    animation: progressGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes progressGlow {
+    0% { box-shadow: var(--glow-cyan); }
+    100% { box-shadow: var(--glow-pink); }
+  }
+
+  .floating-animation {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+  }
+
+  /* 3D Card Flip Effects */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  /* Animation delays */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
   }
 }
