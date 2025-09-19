@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 interface Project {
   title: string;
@@ -14,16 +15,16 @@ interface Project {
 }
 
 export const Projects = () => {
-  const [flippedCard, setFlippedCard] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
 
   const projects: Project[] = [
     {
       title: "E-Commerce Platform",
       description: "Modern e-commerce solution with advanced features",
-      longDescription: "A full-stack e-commerce platform built with React and Node.js, featuring real-time inventory management, secure payment processing, and responsive design.",
+      longDescription: "A full-stack e-commerce platform built with React and Node.js, featuring real-time inventory management, secure payment processing, and responsive design. This project showcases modern web development practices with a focus on user experience and scalability.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-      image: "/api/placeholder/400/250",
+      image: "/src/assets/project-engine.jpg",
       liveLink: "#",
       githubLink: "#",
       features: ["User Authentication", "Payment Integration", "Admin Dashboard", "Real-time Updates"]
@@ -31,9 +32,9 @@ export const Projects = () => {
     {
       title: "Task Management App",
       description: "Collaborative task management with team features",
-      longDescription: "A comprehensive task management application with team collaboration features, real-time updates, and intuitive drag-and-drop interface for productivity enhancement.",
+      longDescription: "A comprehensive task management application with team collaboration features, real-time updates, and intuitive drag-and-drop interface for productivity enhancement. Built with modern technologies to ensure smooth performance and user experience.",
       technologies: ["React", "TypeScript", "Firebase", "Material-UI", "Socket.io"],
-      image: "/api/placeholder/400/250",
+      image: "/src/assets/project-sourceful.jpg",
       liveLink: "#",
       githubLink: "#",
       features: ["Real-time Collaboration", "Drag & Drop", "Team Management", "Progress Tracking"]
@@ -58,8 +59,12 @@ export const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleCardFlip = (index: number) => {
-    setFlippedCard(flippedCard === index ? null : index);
+  const openProjectModal = (project: Project) => {
+    setSelectedProject(project);
+  };
+
+  const closeProjectModal = () => {
+    setSelectedProject(null);
   };
 
   return (
@@ -76,95 +81,46 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="fade-in-up perspective-1000"
+              className="fade-in-up"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div
-                className={`relative w-full h-96 transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
-                  flippedCard === index ? 'rotate-y-180' : ''
-                }`}
-                onClick={() => handleCardFlip(index)}
-              >
-                {/* Front Side */}
-                <div className="absolute inset-0 w-full h-full backface-hidden glass-card rounded-2xl overflow-hidden hover:neon-glow transition-all duration-300">
-                  <div className="aspect-video relative overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <span className="text-6xl opacity-50">🚀</span>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <div className="glass-card rounded-2xl overflow-hidden hover:neon-glow transition-all duration-300 h-full">
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 neon-text">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.slice(0, 3).map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-xs rounded-full bg-primary/20 text-primary border border-primary/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="px-3 py-1 text-xs rounded-full bg-secondary/50 text-secondary-foreground">
+                        +{project.technologies.length - 3} more
+                      </span>
+                    )}
                   </div>
                   
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 neon-text">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.slice(0, 3).map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 text-xs rounded-full bg-primary/20 text-primary border border-primary/30"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <span className="px-3 py-1 text-xs rounded-full bg-secondary/50 text-secondary-foreground">
-                          +{project.technologies.length - 3} more
-                        </span>
-                      )}
-                    </div>
-                    
-                    <div className="text-xs text-center text-muted-foreground">
-                      Click to see details
-                    </div>
-                  </div>
-                </div>
-
-                {/* Back Side */}
-                <div className="absolute inset-0 w-full h-full backface-hidden glass-card rounded-2xl p-6 rotate-y-180 hover:neon-glow transition-all duration-300">
-                  <div className="h-full flex flex-col">
-                    <h3 className="text-xl font-bold mb-3 neon-text">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4 flex-1">{project.longDescription}</p>
-                    
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="text-sm font-semibold mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {project.features.map((feature, idx) => (
-                            <li key={idx} className="text-xs text-muted-foreground flex items-center">
-                              <span className="w-1 h-1 bg-primary rounded-full mr-2"></span>
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-sm font-semibold mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-1">
-                          {project.technologies.map((tech) => (
-                            <span
-                              key={tech}
-                              className="px-2 py-1 text-xs rounded bg-secondary/30 text-secondary-foreground"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="flex gap-2 pt-2">
-                        <Button size="sm" className="flex-1 neon-glow">
-                          <ExternalLink className="w-3 h-3 mr-1" />
-                          Live Demo
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1 glass-card">
-                          <Github className="w-3 h-3 mr-1" />
-                          Code
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
+                  <Button 
+                    onClick={() => openProjectModal(project)}
+                    className="w-full neon-glow"
+                    size="sm"
+                  >
+                    Show Details
+                  </Button>
                 </div>
               </div>
             </div>
@@ -182,6 +138,80 @@ export const Projects = () => {
           </Button>
         </div>
       </div>
+
+      {/* Project Details Modal */}
+      <Dialog open={!!selectedProject} onOpenChange={() => closeProjectModal()}>
+        <DialogContent className="glass-card border-primary/20 max-w-2xl max-h-[90vh] overflow-y-auto">
+          {selectedProject && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-2xl neon-text mb-4">
+                  {selectedProject.title}
+                </DialogTitle>
+              </DialogHeader>
+              
+              <div className="space-y-6">
+                <div className="aspect-video relative overflow-hidden rounded-lg">
+                  <img 
+                    src={selectedProject.image} 
+                    alt={selectedProject.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold mb-3 neon-text">Description</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {selectedProject.longDescription}
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold mb-3 neon-text">Key Features</h4>
+                  <ul className="space-y-2">
+                    {selectedProject.features.map((feature, idx) => (
+                      <li key={idx} className="text-muted-foreground flex items-center">
+                        <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold mb-3 neon-text">Technologies Used</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-sm rounded-full bg-primary/20 text-primary border border-primary/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="flex gap-4 pt-4">
+                  <Button asChild className="flex-1 neon-glow">
+                    <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 glass-card">
+                    <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-2" />
+                      View Code
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
