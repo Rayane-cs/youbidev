@@ -1,21 +1,18 @@
 import { useEffect, useRef } from "react";
 import { Progress } from "@/components/ui/progress";
-import { Code, GitBranch, Palette, LayoutDashboard } from "lucide-react";
 
 export const Skills = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
 
   const skills = [
-    { name: "HTML/CSS", level: 80, icon: <Code className="text-orange-500" /> },
-    { name: "JavaScript", level: 60, icon: <Code className="text-yellow-400" /> },
-    { name: "React", level: 50, icon: <LayoutDashboard className="text-cyan-400" /> },
+    { name: "HTML/CSS", level: 95, icon: "🌐" },
+    { name: "JavaScript", level: 90, icon: "⚡" },
+    { name: "React", level: 88, icon: "⚛️" },
     { name: "TypeScript", level: 85, icon: "📘" },
     { name: "Node.js", level: 80, icon: "🟢" },
     { name: "Tailwind CSS", level: 92, icon: "🎨" },
-    { name: "Git", level: 40, icon: <GitBranch className="text-red-500" /> },
-    { name: "Figma", level: 35, icon: <Palette className="text-pink-400" /> },
-];
-
+    { name: "Git", level: 85, icon: "📝" },
+    { name: "Figma", level: 78, icon: "🎯" },
   ];
 
   useEffect(() => {
