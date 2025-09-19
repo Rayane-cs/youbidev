@@ -87,7 +87,7 @@ export const Skills = () => {
         <div className="mt-16 fade-in-up">
           <h3 className="text-2xl font-bold text-center mb-8 neon-text">Tech Stack</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {["React", "Next.js", "TypeScript", "Tailwind", "Node.js", "MongoDB", "Firebase", "Vercel", "Git", "Figma"].map((tech, index) => (
+            {[/* "React", "Next.js", "TypeScript", "Tailwind", "Node.js", "MongoDB", "Firebase", */"Vercel", "Git", "Figma", "CSS3", "HTML5", "VS Code"].map((tech, index) => (
               <div
                 key={tech}
                 className="glass-card px-6 py-3 rounded-full text-sm font-medium hover:neon-glow transition-all duration-300 hover:scale-105"
