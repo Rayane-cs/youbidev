@@ -1,23 +1,19 @@
 import { useEffect, useRef } from "react";
 import { Progress } from "@/components/ui/progress";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaFigma } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
 export const Skills = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
 
-const skills = [
-  { name: "HTML", level: 80, icon: <FaHtml5 className="text-orange-500" /> },
-  { name: "CSS", level: 80, icon: <FaCss3Alt className="text-blue-500" /> },
-  { name: "JavaScript", level: 0, icon: <FaJs className="text-yellow-400" /> },
-  { name: "React", level: 0, icon: <FaReact className="text-cyan-400" /> },
-  { name: "TypeScript", level: 0, icon: <SiTypescript className="text-blue-600" /> },
-  { name: "Node.js", level: 0, icon: <FaNodeJs className="text-green-500" /> },
-  { name: "Tailwind CSS", level: 0, icon: <SiTailwindcss className="text-sky-400" /> },
-  { name: "Git", level: 5, icon: <FaGitAlt className="text-orange-600" /> },
-  { name: "Figma", level: 10, icon: <FaFigma className="text-pink-500" /> },
-];
-
+  const skills = [
+    { name: "HTML/CSS", level: 95, icon: "🌐" },
+    { name: "JavaScript", level: 90, icon: "⚡" },
+    { name: "React", level: 88, icon: "⚛️" },
+    { name: "TypeScript", level: 85, icon: "📘" },
+    { name: "Node.js", level: 80, icon: "🟢" },
+    { name: "Tailwind CSS", level: 92, icon: "🎨" },
+    { name: "Git", level: 85, icon: "📝" },
+    { name: "Figma", level: 78, icon: "🎯" },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
