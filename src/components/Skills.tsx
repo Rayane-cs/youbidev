@@ -5,14 +5,14 @@ export const Skills = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
 
   const skills = [
-    { name: "HTML/CSS", level: 95, icon: "🌐" },
-    { name: "JavaScript", level: 90, icon: "⚡" },
-    { name: "React", level: 88, icon: "⚛️" },
-    { name: "TypeScript", level: 85, icon: "📘" },
-    { name: "Node.js", level: 80, icon: "🟢" },
-    { name: "Tailwind CSS", level: 92, icon: "🎨" },
-    { name: "Git", level: 85, icon: "📝" },
-    { name: "Figma", level: 78, icon: "🎯" },
+    { name: "HTML/CSS", level: 60, icon: "🌐" },
+    { name: "JavaScript", level: 00, icon: "⚡" },
+    { name: "React", level: 00, icon: "⚛️" },
+    { name: "TypeScript", level: 00, icon: "📘" },
+    { name: "Node.js", level: 00, icon: "🟢" },
+    { name: "Tailwind CSS", level: 00, icon: "🎨" },
+    { name: "Git", level: 05, icon: "📝" },
+    { name: "Figma", level: 10, icon: "🎯" },
   ];
 
   useEffect(() => {
