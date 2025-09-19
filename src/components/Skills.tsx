@@ -11,7 +11,7 @@ export const Skills = () => {
     { name: "TypeScript", level: 10, icon: "📘" },
     { name: "Node.js", level: 10, icon: "🟢" },
     { name: "Tailwind CSS", level: 10, icon: "🎨" },
-    { name: "Git", level: 05, icon: "📝" },
+    { name: "Git", level: 25, icon: "📝" },
     { name: "Figma", level: 10, icon: "🎯" },
   ];
 
