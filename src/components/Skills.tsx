@@ -9,11 +9,11 @@ export const Skills = () => {
 const skills = [
   { name: "HTML", level: 80, icon: <FaHtml5 className="text-orange-500" /> },
   { name: "CSS", level: 80, icon: <FaCss3Alt className="text-blue-500" /> },
-  { name: "JavaScript", level: 1, icon: <FaJs className="text-yellow-400" /> },
-  { name: "React", level: 1, icon: <FaReact className="text-cyan-400" /> },
-  { name: "TypeScript", level: 1, icon: <SiTypescript className="text-blue-600" /> },
-  { name: "Node.js", level: 1, icon: <FaNodeJs className="text-green-500" /> },
-  { name: "Tailwind CSS", level: 1, icon: <SiTailwindcss className="text-sky-400" /> },
+  { name: "JavaScript", level: 0, icon: <FaJs className="text-yellow-400" /> },
+  { name: "React", level: 0, icon: <FaReact className="text-cyan-400" /> },
+  { name: "TypeScript", level: 0, icon: <SiTypescript className="text-blue-600" /> },
+  { name: "Node.js", level: 0, icon: <FaNodeJs className="text-green-500" /> },
+  { name: "Tailwind CSS", level: 0, icon: <SiTailwindcss className="text-sky-400" /> },
   { name: "Git", level: 5, icon: <FaGitAlt className="text-orange-600" /> },
   { name: "Figma", level: 10, icon: <FaFigma className="text-pink-500" /> },
 ];
