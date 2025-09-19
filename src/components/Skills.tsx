@@ -71,7 +71,7 @@ export const Skills = () => {
               </div>
               
               <div className="progress-bar">
-                <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
+                <div className="w-full bg-muted rounded-full h-3 overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
                     data-progress={skill.level}
