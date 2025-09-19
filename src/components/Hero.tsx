@@ -31,7 +31,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 relative" ref={heroRef}>
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 relative" ref={heroRef}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -39,7 +39,7 @@ export const Hero = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/20 rounded-full blur-2xl floating-animation"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
         {/* Left side - Content */}
         <div className="space-y-8">
           <div className="space-y-6 fade-in-up">
@@ -61,56 +61,56 @@ export const Hero = () => {
             </div>
             
             <div>
-              <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
+              <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold leading-tight">
                 <span className="neon-text">Ayoub</span>
               </h1>
-              <p className="text-2xl lg:text-3xl text-muted-foreground mt-4 font-light">
+              <p className="text-lg sm:text-2xl lg:text-3xl text-muted-foreground mt-4 font-light">
                 Bring ideas to <span className="neon-text font-medium">life</span>
               </p>
             </div>
           </div>
 
-          <div className="flex gap-4 fade-in-up">
+          <div className="flex flex-col sm:flex-row gap-4 fade-in-up">
             <Button 
               size="lg" 
-              className="text-lg px-8 neon-glow hover:scale-105 transition-all duration-300"
+              className="text-base sm:text-lg px-6 sm:px-8 neon-glow hover:scale-105 transition-all duration-300"
               onClick={() => scrollToSection('projects')}
             >
               View My Work
-              <ExternalLink className="w-5 h-5" />
+              <ExternalLink className="w-4 sm:w-5 h-4 sm:h-5" />
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 glass-card hover:neon-glow transition-all duration-300"
+              className="text-base sm:text-lg px-6 sm:px-8 glass-card hover:neon-glow transition-all duration-300"
               onClick={() => scrollToSection('contact')}
             >
-              <Download className="w-5 h-5" />
+              <Download className="w-4 sm:w-5 h-4 sm:h-5" />
               Download CV
             </Button>
           </div>
         </div>
 
         {/* Right side - Animated Stats */}
-        <div className="grid grid-cols-2 gap-6">
-          <div className="fade-in-up glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300">
-            <div className="text-4xl font-bold neon-text mb-2">3+</div>
-            <div className="text-muted-foreground">Years Experience</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="fade-in-up glass-card p-6 sm:p-8 rounded-2xl hover:neon-glow transition-all duration-300">
+            <div className="text-3xl sm:text-4xl font-bold neon-text mb-2">3+</div>
+            <div className="text-muted-foreground text-sm sm:text-base">Years Experience</div>
           </div>
           
-          <div className="fade-in-up glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300 animation-delay-200">
-            <div className="text-4xl font-bold neon-text mb-2">50+</div>
-            <div className="text-muted-foreground">Projects Done</div>
+          <div className="fade-in-up glass-card p-6 sm:p-8 rounded-2xl hover:neon-glow transition-all duration-300 animation-delay-200">
+            <div className="text-3xl sm:text-4xl font-bold neon-text mb-2">50+</div>
+            <div className="text-muted-foreground text-sm sm:text-base">Projects Done</div>
           </div>
           
-          <div className="fade-in-up col-span-2 glass-card p-8 rounded-2xl hover:neon-glow transition-all duration-300 animation-delay-400">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
-                <span className="text-white text-xl font-bold">💡</span>
+          <div className="fade-in-up col-span-1 sm:col-span-2 glass-card p-6 sm:p-8 rounded-2xl hover:neon-glow transition-all duration-300 animation-delay-400">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
+                <span className="text-white text-lg sm:text-xl font-bold">💡</span>
               </div>
-              <span className="text-xl font-semibold">Always Learning</span>
+              <span className="text-lg sm:text-xl font-semibold">Always Learning</span>
             </div>
-            <div className="text-muted-foreground">Passionate about new technologies and modern development</div>
+            <div className="text-muted-foreground text-sm sm:text-base">Passionate about new technologies and modern development</div>
           </div>
         </div>
       </div>

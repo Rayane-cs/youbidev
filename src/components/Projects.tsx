@@ -68,7 +68,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-6" ref={projectsRef}>
+    <section id="projects" className="py-12 sm:py-20 px-4 sm:px-6" ref={projectsRef}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 fade-in-up">
           <h2 className="text-4xl font-bold mb-4 neon-text">Featured Projects</h2>
@@ -77,7 +77,7 @@ export const Projects = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={project.title}
@@ -141,7 +141,7 @@ export const Projects = () => {
 
       {/* Project Details Modal */}
       <Dialog open={!!selectedProject} onOpenChange={() => closeProjectModal()}>
-        <DialogContent className="glass-card border-primary/20 max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="glass-card border-primary/20 max-w-[95vw] sm:max-w-2xl max-h-[90vh] overflow-y-auto mx-4 sm:mx-0">
           {selectedProject && (
             <>
               <DialogHeader>
