@@ -30,6 +30,16 @@ export const Projects = () => {
       features: ["User Authentication", "Payment Integration", "Admin Dashboard", "Real-time Updates"]
     },
     {
+      title: "CS-Student Platform",
+      description: "Modern Computer Student platform with advanced features",
+      longDescription: "A front-end CS-Student platform built with React and Node.js, featuring group chat, files uplod/download ing, and responsive design. This project showcases modern web development practices with a focus on user experience and scalability.",
+      technologies: ["React", "Node.js", "Tailwind CSS"],
+      image: "/src/assets/project-engine.jpg",
+      liveLink: "#",
+      githubLink: "#",
+      features: ["Group chat", "Files uplod/download ing", "Admin Dashboard", "Ai"]
+    },
+    {
       title: "Task Management App",
       description: "Collaborative task management with team features",
       longDescription: "A comprehensive task management application with team collaboration features, real-time updates, and intuitive drag-and-drop interface for productivity enhancement. Built with modern technologies to ensure smooth performance and user experience.",
