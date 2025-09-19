@@ -6,11 +6,11 @@ export const Skills = () => {
 
   const skills = [
     { name: "HTML/CSS", level: 60, icon: "🌐" },
-    { name: "JavaScript", level: 00, icon: "⚡" },
-    { name: "React", level: 00, icon: "⚛️" },
-    { name: "TypeScript", level: 00, icon: "📘" },
-    { name: "Node.js", level: 00, icon: "🟢" },
-    { name: "Tailwind CSS", level: 00, icon: "🎨" },
+    { name: "JavaScript", level: 01, icon: "⚡" },
+    { name: "React", level: 01, icon: "⚛️" },
+    { name: "TypeScript", level: 01, icon: "📘" },
+    { name: "Node.js", level: 01, icon: "🟢" },
+    { name: "Tailwind CSS", level: 01, icon: "🎨" },
     { name: "Git", level: 05, icon: "📝" },
     { name: "Figma", level: 10, icon: "🎯" },
   ];
