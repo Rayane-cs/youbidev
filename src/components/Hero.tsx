@@ -48,10 +48,10 @@ export const Hero = () => {
                 <img src="image/pfp.jpg" alt="Profile" className="w-full h-full object-cover"/>
               </div>
               <div className="flex gap-3">
-                <a href="#" className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:neon-glow transition-all duration-300 hover:scale-110">
+                <a href="https://github.com/Rayane-cs" className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:neon-glow transition-all duration-300 hover:scale-110">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:neon-glow transition-all duration-300 hover:scale-110">
+                <a href="https://www.linkedin.com/in/rayane-ayoub-9778902b5/" className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:neon-glow transition-all duration-300 hover:scale-110">
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a href="#" className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:neon-glow transition-all duration-300 hover:scale-110">
