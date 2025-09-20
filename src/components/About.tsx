@@ -31,7 +31,7 @@ export const About = () => {
             <div className="relative">
               <div className="w-80 h-80 rounded-full glass-card p-4 floating-animation">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-8xl font-bold text-white">
-                  A
+                    <img src="image/pfp.jpg" alt="Profile" className="w-full h-full object-cover"/>
                 </div>
               </div>
               <div className="absolute -inset-4 rounded-full border-2 border-primary/20 animate-pulse"></div>
