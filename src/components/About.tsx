@@ -29,10 +29,8 @@ export const About = () => {
           {/* Profile Image */}
           <div className="fade-in-up flex justify-center lg:justify-start">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full glass-card p-4 floating-animation">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-8xl font-bold text-white">
-                  A
-                </div>
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center font-bold text-2xl text-white neon-glow overflow-hidden">
+                <img src="image/pfp.jpg" alt="Profile" className="w-full h-full object-cover"/>
               </div>
               <div className="absolute -inset-4 rounded-full border-2 border-primary/20 animate-pulse"></div>
             </div>
