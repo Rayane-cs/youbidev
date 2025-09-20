@@ -50,9 +50,9 @@ export const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub", color: "hover:text-gray-600" },
+    { icon: Github, href: "https://github.com/Rayane-cs", label: "GitHub", color: "hover:text-gray-600" },
     { icon: Instagram, href: "#", label: "Instagram", color: "hover:text-pink-500" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-500" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/rayane-ayoub-9778902b5/", label: "LinkedIn", color: "hover:text-blue-500" },
     { icon: MessageCircle, href: "#", label: "WhatsApp", color: "hover:text-green-500" },
   ];
 
@@ -132,7 +132,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium">ayoub@example.com</p>
+                    <p className="font-medium">kessoularayaneayoub@gmail.com</p>
                   </div>
                 </div>
                 
@@ -142,7 +142,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-medium">+1 (555) 123-4567</p>
+                    <p className="font-medium">+213 796808832</p>
                   </div>
                 </div>
                 
