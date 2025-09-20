@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Twitter, ExternalLink, Download, ArrowDown } from "lucide-react";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
+import pfp from "/src/assets/pfp.jpg";
 
 export const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -45,9 +45,13 @@ export const Hero = () => {
         <div className="space-y-8">
           <div className="space-y-6 fade-in-up">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden">
-                <Image src="/images/pfp.jpg" alt="Profile" width={64} height={64} className="object-cover" />
-              </div>
+              export const Hero = () => {
+                return (
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden">
+                    <img src={pfp} alt="Profile" className="w-full h-full object-cover"/>
+                  </div>
+                );
+              };
               <div className="flex gap-3">
                 <a href="#" className="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:neon-glow transition-all duration-300 hover:scale-110">
                   <Github className="w-5 h-5" />
