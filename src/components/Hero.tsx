@@ -44,7 +44,7 @@ export const Hero = () => {
         <div className="space-y-8">
           <div className="space-y-6 fade-in-up">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center font-bold text-2xl text-white neon-glow">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center font-bold text-2xl text-white neon-glow overflow-hidden">
                 <img src="image/pfp.jpg" alt="Profile" className="w-full h-full object-cover"/>
               </div>
               <div className="flex gap-3">
